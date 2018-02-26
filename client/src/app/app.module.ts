@@ -12,12 +12,18 @@ import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { Router } from '@angular/router/src/router';
+
 import { UserService } from './user.service';
+import { ItemService } from './item.service';
+
+import { MauserlistComponent } from './mauserlist/mauserlist.component';
+import { ItemsComponent } from './items/items.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'items', component: ItemsComponent },
   { path: 'main', component: MainComponent },
   { path: '**', redirectTo: '/login', pathMatch: 'full' }
 
@@ -33,7 +39,9 @@ const appRoutes: Routes = [
     RegisterComponent,
     MainComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MauserlistComponent,
+    ItemsComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +49,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule
   ],
-  providers: [UserService],
+  providers: [UserService, ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
