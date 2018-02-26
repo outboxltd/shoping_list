@@ -16,7 +16,10 @@ export class LoginComponent implements OnInit {
   onSubmit(loginForm) {
     const { valid, value } = loginForm;
     if (valid) {
-      this.user.login(value).subscribe(res => console.log(res));
+      this.user.login(value).subscribe(res => {
+        console.log(res);
+        alert('sent');
+      });
     }
   }
 

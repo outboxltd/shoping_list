@@ -16,7 +16,11 @@ export class RegisterComponent implements OnInit {
   onSubmit(registerForm) {
     const { valid, value } = registerForm;
     if (valid) {
-      this.user.register(value).subscribe(res => console.log(res));
+      this.user.register(value).subscribe(res => {
+        console.log(res);
+        alert('done');
+
+      });
     }
   }
 
