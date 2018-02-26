@@ -14,6 +14,11 @@ export class UserService {
     return this.http.post('/api/user/login', loginData).map(res => res.json());
   }
 
+
+  register(registerData) {
+    return this.http.post('/api/user/register', registerData).map(res => res.json());
+  }
+
 }
 
 

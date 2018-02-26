@@ -6,7 +6,7 @@ router.post('/login', (req, res) => {
 })
 
 router.post('/register', (req, res) => {
-    res.send();
+    res.send(true);
 });
 
 module.exports = router;
