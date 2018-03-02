@@ -14,10 +14,11 @@ router.post('/login', async (req, res) => {
             res.send({ error: 'password is worng' });
         }
 
+        req.session.userId = user._id;
     } catch (error) {
         res.sendStatus(500)
-    } 
-
+    }
+    
     res.send({ error: '' });
 })
 
@@ -29,6 +30,11 @@ router.post('/register', async (req, res) => {
     }
 
     res.send({ error: '' });
+});
+
+router.get('/isLoggedIn', (req, res) => {
+    const { userId } = req.session;
+    res.send(!!userId);
 });
 
 module.exports = router;
