@@ -2,9 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 <<<<<<< HEAD
+<<<<<<< HEAD
 const session = require('express-session');
 
 
+=======
+const session = require('express-session')
+>>>>>>> 779167af03fd4576254420efa810499672b2acd9
 =======
 const session = require('express-session')
 >>>>>>> 779167af03fd4576254420efa810499672b2acd9
