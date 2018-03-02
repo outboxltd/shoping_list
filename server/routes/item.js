@@ -12,8 +12,8 @@ router.get('/getOne/:id', (req, res) => {
 });
 
 
-router.post('/api/item/add', async (req, res) => {
-    await Item.create(req.body).catch(err => res.send(error));
+router.post('/add', async (req, res) => {
+    await Item.create(req.body).catch(err => res.sendStatus(500));
     res.send(true);
 });
 

@@ -23,10 +23,10 @@ const User = mongoose.model('User', userSchema);
 // -----------------------------------------------
 
 const itemSchema = mongoose.Schema({
-    itemname: String,
-    item_color: String,
-    item_price: Number,
-    item_amunt: Number
+    itemName: String,
+    itemColor: String,
+    itemPrice: String,
+    itemAmunt: Number
 });
 
 const Item = mongoose.model('Item', userSchema);
