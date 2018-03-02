@@ -14,7 +14,8 @@ const userSchema = mongoose.Schema({
     password: String,
     phone: String,
     city: String,
-    age: String
+    age: String,
+    date: { type: Date, default: new Date() }
 });
 
 const User = mongoose.model('User', userSchema);
