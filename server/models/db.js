@@ -11,11 +11,30 @@ db.once('open', function () {
 
 const userSchema = mongoose.Schema({
     username: String,
-    password: String
+    password: String,
+    phone: String,
+    city: String,
+    age: String
 });
 
 const User = mongoose.model('User', userSchema);
 
+// -----------------------------------------------
+
+const itemSchema = mongoose.Schema({
+    itemname: String,
+    item_color: String,
+    item_price: Number,
+    item_amunt: Number
+});
+
+const Item = mongoose.model('Item', userSchema);
+
+// -----------------------------------------------
+
+
+
 module.exports = { 
-    User 
+    User, 
+    Item
 };

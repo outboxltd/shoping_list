@@ -9,7 +9,7 @@ import { ItemService } from '../item.service';
 })
 export class ItemsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private item: ItemService) { }
 
   ngOnInit() {
   }
@@ -17,8 +17,11 @@ export class ItemsComponent implements OnInit {
   onSubmit(itemForm) {
     const { valid, value } = itemForm;
     if (valid) {
-      this.item.register(value).subscribe(res => {
+      this.item.add(value).subscribe(res => {
         console.log(res);
         alert('item added');
+      });
+    }
+  }
 
 }
